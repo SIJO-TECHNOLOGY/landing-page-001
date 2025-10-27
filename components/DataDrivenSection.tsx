@@ -15,7 +15,7 @@ export default function DataDrivenSection() {
         <div className="grid md:grid-cols-3 gap-8 mb-20">
           <div className="text-center p-8 rounded-2xl bg-gradient-to-br from-purple-900/20 to-purple-900/5 border border-purple-800/30">
             <div className="text-5xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent mb-4">
-              $500K+
+            €500K+
             </div>
             <p className="text-gray-300 text-lg">Average annual savings reported by our clients</p>
           </div>
