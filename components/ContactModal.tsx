@@ -23,7 +23,7 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
 
   return (
     <div 
-      className="fixed inset-0 z-50 flex items-center justify-center p-4"
+      className="fixed inset-0 z-50 flex items-center justify-center p-4 overflow-y-auto"
       onClick={onClose}
     >
       {/* Backdrop */}
@@ -31,41 +31,41 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
       
       {/* Modal */}
       <div 
-        className="relative w-full max-w-2xl bg-gradient-to-br from-primary-dark via-purple-900/50 to-primary-darker rounded-2xl border border-purple-800/50 shadow-2xl overflow-hidden animate-slideUp"
+        className="relative w-full max-w-2xl my-8 bg-gradient-to-br from-primary-dark via-purple-900/50 to-primary-darker rounded-2xl border border-purple-800/50 shadow-2xl overflow-hidden animate-slideUp max-h-[90vh] flex flex-col"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Glow effect */}
         <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 to-pink-500/10 pointer-events-none" />
         
         {/* Header */}
-        <div className="relative px-8 py-6 border-b border-purple-800/50 bg-gradient-to-r from-purple-900/30 to-transparent">
+        <div className="relative px-4 md:px-8 py-4 md:py-6 border-b border-purple-800/50 bg-gradient-to-r from-purple-900/30 to-transparent flex-shrink-0">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 bg-gradient-to-br from-purple-500 to-pink-500 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-xl">A</span>
+              <div className="w-8 h-8 md:w-10 md:h-10 bg-gradient-to-br from-purple-500 to-pink-500 rounded-lg flex items-center justify-center">
+                <span className="text-white font-bold text-lg md:text-xl">A</span>
               </div>
               <div>
-                <h2 className="text-2xl font-bold text-white">Get in Touch</h2>
-                <p className="text-sm text-gray-400">Let&apos;s discuss your project</p>
+                <h2 className="text-xl md:text-2xl font-bold text-white">Get in Touch</h2>
+                <p className="text-xs md:text-sm text-gray-400">Let&apos;s discuss your project</p>
               </div>
             </div>
             <button
               onClick={onClose}
-              className="w-10 h-10 flex items-center justify-center rounded-lg bg-purple-900/30 hover:bg-purple-800/50 border border-purple-800/50 transition-all hover:scale-110"
+              className="w-8 h-8 md:w-10 md:h-10 flex items-center justify-center rounded-lg bg-purple-900/30 hover:bg-purple-800/50 border border-purple-800/50 transition-all hover:scale-110"
             >
-              <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-5 h-5 md:w-6 md:h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
               </svg>
             </button>
           </div>
         </div>
 
-        {/* Content */}
-        <div className="p-8 space-y-6">
+        {/* Scrollable Content */}
+        <div className="overflow-y-auto flex-1 px-4 md:px-8 py-4 md:py-8 space-y-6">
           {/* Contact Info Cards */}
           <div className="grid md:grid-cols-2 gap-6">
             {/* Email */}
-            <div className="group p-6 rounded-xl bg-gradient-to-br from-purple-900/30 to-purple-900/10 border border-purple-800/40 hover:border-purple-600/60 transition-all hover:-translate-y-1">
+            <div className="group p-4 md:p-6 rounded-xl bg-gradient-to-br from-purple-900/30 to-purple-900/10 border border-purple-800/40 hover:border-purple-600/60 transition-all hover:-translate-y-1">
               <div className="flex items-start gap-4">
                 <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
                   <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -85,7 +85,7 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
             </div>
 
             {/* Phone */}
-            <div className="group p-6 rounded-xl bg-gradient-to-br from-purple-900/30 to-purple-900/10 border border-purple-800/40 hover:border-purple-600/60 transition-all hover:-translate-y-1">
+            <div className="group p-4 md:p-6 rounded-xl bg-gradient-to-br from-purple-900/30 to-purple-900/10 border border-purple-800/40 hover:border-purple-600/60 transition-all hover:-translate-y-1">
               <div className="flex items-start gap-4">
                 <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
                   <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -105,7 +105,7 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
             </div>
 
             {/* Address */}
-            <div className="group p-6 rounded-xl bg-gradient-to-br from-purple-900/30 to-purple-900/10 border border-purple-800/40 hover:border-purple-600/60 transition-all hover:-translate-y-1">
+            <div className="group p-4 md:p-6 rounded-xl bg-gradient-to-br from-purple-900/30 to-purple-900/10 border border-purple-800/40 hover:border-purple-600/60 transition-all hover:-translate-y-1">
               <div className="flex items-start gap-4">
                 <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
                   <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -130,7 +130,7 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
             </div>
 
             {/* LinkedIn */}
-            <div className="group p-6 rounded-xl bg-gradient-to-br from-purple-900/30 to-purple-900/10 border border-purple-800/40 hover:border-purple-600/60 transition-all hover:-translate-y-1">
+            <div className="group p-4 md:p-6 rounded-xl bg-gradient-to-br from-purple-900/30 to-purple-900/10 border border-purple-800/40 hover:border-purple-600/60 transition-all hover:-translate-y-1">
               <div className="flex items-start gap-4">
                 <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
                   <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
@@ -152,15 +152,16 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
             </div>
           </div>
 
-          {/* Action Button */}
-          <div className="pt-4">
-            <button className="w-full bg-primary-purple hover:bg-purple-600 text-white px-6 py-4 rounded-xl font-semibold text-lg transition-all transform hover:scale-105 flex items-center justify-center gap-2">
-              Schedule a Free Consultation
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-              </svg>
-            </button>
-          </div>
+        </div>
+
+        {/* Action Button - Sticky Footer */}
+        <div className="px-4 md:px-8 py-4 border-t border-purple-800/50 bg-gradient-to-r from-purple-900/30 to-transparent flex-shrink-0">
+          <button className="w-full bg-primary-purple hover:bg-purple-600 text-white px-4 md:px-6 py-3 md:py-4 rounded-xl font-semibold text-base md:text-lg transition-all transform hover:scale-105 flex items-center justify-center gap-2">
+            Schedule a Free Consultation
+            <svg className="w-4 h-4 md:w-5 md:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+            </svg>
+          </button>
         </div>
       </div>
     </div>
