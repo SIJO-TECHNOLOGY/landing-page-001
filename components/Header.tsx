@@ -5,6 +5,7 @@ import ContactModal from './ContactModal'
 
 export default function Header() {
   const [isModalOpen, setIsModalOpen] = useState(false)
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
   return (
     <>
@@ -20,7 +21,7 @@ export default function Header() {
           </span>
         </div>
 
-        {/* Navigation */}
+        {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-8">
           <a href="#services" className="text-gray-300 hover:text-white transition-colors">
             Services
@@ -35,7 +36,45 @@ export default function Header() {
             Get in touch
           </button>
         </nav>
+
+        {/* Mobile Hamburger Button */}
+        <button 
+          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          className="md:hidden p-2 rounded-lg hover:bg-purple-900/30 transition-colors"
+          aria-label="Menu"
+        >
+          <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            {isMobileMenuOpen ? (
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+            ) : (
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+            )}
+          </svg>
+        </button>
       </div>
+
+      {/* Mobile Menu */}
+      {isMobileMenuOpen && (
+        <div className="md:hidden border-t border-purple-900/20 bg-primary-dark/95">
+          <div className="container mx-auto px-6 py-4 space-y-4">
+            <a href="#services" className="block text-gray-300 hover:text-white transition-colors" onClick={() => setIsMobileMenuOpen(false)}>
+              Services
+            </a>
+            <a href="#learn" className="block text-gray-300 hover:text-white transition-colors" onClick={() => setIsMobileMenuOpen(false)}>
+              Learn
+            </a>
+            <button 
+              onClick={() => {
+                setIsModalOpen(true)
+                setIsMobileMenuOpen(false)
+              }}
+              className="w-full bg-primary-purple hover:bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold transition-colors"
+            >
+              Get in touch
+            </button>
+          </div>
+        </div>
+      )}
     </header>
 
     <ContactModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
