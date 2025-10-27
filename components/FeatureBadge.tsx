@@ -40,7 +40,7 @@ export default function FeatureBadge({ name, shortName, description, tooltip }: 
                 {name}
               </h3>
               <p className="text-purple-300 text-xs font-medium mb-2">{description}</p>
-              <p className="text-gray-300 text-xs leading-relaxed italic">"{tooltip}"</p>
+              <p className="text-gray-300 text-xs leading-relaxed italic">&ldquo;{tooltip}&rdquo;</p>
             </div>
           </div>
         </div>

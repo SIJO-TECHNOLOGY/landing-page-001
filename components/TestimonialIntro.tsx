@@ -4,7 +4,7 @@ export default function TestimonialIntro() {
       <div className="max-w-4xl mx-auto text-center relative">
         {/* Large Quote Mark Background */}
         <div className="absolute -top-20 left-1/2 transform -translate-x-1/2 text-purple-900/20 text-9xl font-bold">
-          "
+        &ldquo;
         </div>
 
         {/* Quote */}
@@ -27,7 +27,7 @@ export default function TestimonialIntro() {
           {/* Tagline - under attribution, aligned with Founder line */}
           <div className="flex justify-end w-full mr-32">
             <p className="text-sm text-gray-400 italic">
-              "Engineering Intelligence. Empowering Business."
+              &ldquo;Engineering Intelligence. Empowering Business.&rdquo;
             </p>
           </div>
         </div>

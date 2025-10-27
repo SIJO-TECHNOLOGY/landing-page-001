@@ -30,7 +30,7 @@ export default function PurposeBuiltAI() {
             Unlock the power of <span className="text-purple-400">purpose-built AI</span>
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-            Generic AI won't solve your specific business problems. Our purpose-built models are trained to predict problems, automate workflows, and optimize your operations.
+            Generic AI won&apos;t solve your specific business problems. Our purpose-built models are trained to predict problems, automate workflows, and optimize your operations.
           </p>
           <button className="bg-primary-purple hover:bg-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg inline-flex items-center gap-2 transition-all">
             Discover my AI readiness

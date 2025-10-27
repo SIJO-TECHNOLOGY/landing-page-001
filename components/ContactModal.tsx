@@ -46,7 +46,7 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
               </div>
               <div>
                 <h2 className="text-2xl font-bold text-white">Get in Touch</h2>
-                <p className="text-sm text-gray-400">Let's discuss your project</p>
+                <p className="text-sm text-gray-400">Let&apos;s discuss your project</p>
               </div>
             </div>
             <button
