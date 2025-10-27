@@ -36,15 +36,15 @@ export default function DataDrivenSection() {
         {/* Testimonial */}
         <div className="max-w-4xl mx-auto p-12 rounded-2xl bg-gradient-to-br from-purple-900/20 to-purple-900/5 border border-purple-800/30">
           <p className="text-2xl text-white mb-8 italic">
-          &ldquo;Working with Acebyte Technology completely changed the way we manage our operations. Their AI-driven platform brought us clarity, efficiency, and transparency. We cut operational costs by 35% and accelerated timelines by nearly a month.&ldquo;
+          &ldquo;Working with Acebyte Technology completely changed the way we manage our operations. Their AI-driven platform brought us clarity, efficiency, and transparency. We cut operational costs by 35% and accelerated timelines by nearly a month.&rdquo;
           </p>
           <div className="flex items-center gap-4">
             <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full flex items-center justify-center">
-              <span className="text-white font-bold">JD</span>
+              <span className="text-white font-bold">AZ</span>
             </div>
             <div>
-              <p className="text-white font-semibold">John Doe</p>
-              <p className="text-gray-400 text-sm">Operations Director</p>
+              <p className="text-white font-semibold">Austin ZHANG</p>
+              <p className="text-gray-400 text-sm">Founder</p>
             </div>
           </div>
         </div>
