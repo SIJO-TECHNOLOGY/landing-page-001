@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Inter } from "next/font/google";
 import "./globals.css";
+import { MotionProvider } from "@/components/MotionProvider";
+import { BRAND } from "@/lib/content";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -17,10 +19,32 @@ const inter = Inter({
   subsets: ["latin"],
 });
 
+const TITLE = `${BRAND.full} — Purpose-built AI for business operations`;
+const DESCRIPTION =
+  "AceByte builds custom AI that automates and optimizes your operations — cutting costs, accelerating timelines, and turning data into decisions. Discover your AI readiness.";
+
 export const metadata: Metadata = {
-  title: "AM Shift — The operating system for engineering intelligence",
-  description:
-    "Collaborative AI agents that investigate your distributed systems — Kafka, databases, logs, Kubernetes — to find root causes in minutes, not hours.",
+  metadataBase: new URL("https://www.acebyte-technology.com"),
+  title: TITLE,
+  description: DESCRIPTION,
+  applicationName: BRAND.full,
+  openGraph: {
+    title: TITLE,
+    description: DESCRIPTION,
+    siteName: BRAND.full,
+    type: "website",
+    url: "/",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: TITLE,
+    description: DESCRIPTION,
+  },
+};
+
+export const viewport = {
+  themeColor: "#0b1220",
+  colorScheme: "dark" as const,
 };
 
 export default function RootLayout({
@@ -33,7 +57,9 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} ${inter.variable} h-full antialiased`}
     >
-      <body className="grain min-h-full bg-bg text-text">{children}</body>
+      <body className="grain min-h-full bg-bg text-text">
+        <MotionProvider>{children}</MotionProvider>
+      </body>
     </html>
   );
 }

@@ -41,21 +41,24 @@ interface Seed {
   pipeline: Vec;
 }
 
+// Source labels are the customer's existing systems (AceByte integrations);
+// the four agents are AceByte's purpose-built AI workers. The right side is the
+// optimization pipeline that resolves into a measurable outcome.
 const SEEDS: readonly Seed[] = [
-  { id: "logs", label: "elk.logs", kind: "source", pipeline: { x: -1.0, y: -0.85 } },
-  { id: "db", label: "oracle.db", kind: "source", pipeline: { x: -1.0, y: -0.51 } },
-  { id: "kafka", label: "kafka.orders", kind: "source", pipeline: { x: -1.0, y: -0.17 } },
-  { id: "api", label: "payments.api", kind: "source", pipeline: { x: -1.0, y: 0.17 } },
-  { id: "k8s", label: "k8s.cluster", kind: "source", pipeline: { x: -1.0, y: 0.51 } },
-  { id: "ext", label: "service-b.ext", kind: "source", pipeline: { x: -1.0, y: 0.85 } },
-  { id: "coordinator", label: "coordinator", kind: "coordinator", pipeline: { x: -0.5, y: 0 } },
-  { id: "agent-log", label: "agent://log", kind: "agent", pipeline: { x: -0.05, y: -0.6 } },
-  { id: "agent-db", label: "agent://db", kind: "agent", pipeline: { x: -0.05, y: -0.2 } },
-  { id: "agent-api", label: "agent://api", kind: "agent", pipeline: { x: -0.05, y: 0.2 } },
-  { id: "agent-infra", label: "agent://infra", kind: "agent", pipeline: { x: -0.05, y: 0.6 } },
+  { id: "logs", label: "salesforce", kind: "source", pipeline: { x: -1.0, y: -0.85 } },
+  { id: "db", label: "oracle", kind: "source", pipeline: { x: -1.0, y: -0.51 } },
+  { id: "kafka", label: "sap", kind: "source", pipeline: { x: -1.0, y: -0.17 } },
+  { id: "api", label: "netsuite", kind: "source", pipeline: { x: -1.0, y: 0.17 } },
+  { id: "k8s", label: "workday", kind: "source", pipeline: { x: -1.0, y: 0.51 } },
+  { id: "ext", label: "hubspot", kind: "source", pipeline: { x: -1.0, y: 0.85 } },
+  { id: "coordinator", label: "acebyte.core", kind: "coordinator", pipeline: { x: -0.5, y: 0 } },
+  { id: "agent-log", label: "agent://data", kind: "agent", pipeline: { x: -0.05, y: -0.6 } },
+  { id: "agent-db", label: "agent://ops", kind: "agent", pipeline: { x: -0.05, y: -0.2 } },
+  { id: "agent-api", label: "agent://finance", kind: "agent", pipeline: { x: -0.05, y: 0.2 } },
+  { id: "agent-infra", label: "agent://market", kind: "agent", pipeline: { x: -0.05, y: 0.6 } },
   { id: "normalize", label: "normalize", kind: "normalize", pipeline: { x: 0.4, y: 0 } },
-  { id: "reason", label: "reason", kind: "reason", pipeline: { x: 0.72, y: 0 } },
-  { id: "root", label: "root-cause", kind: "root", pipeline: { x: 1.0, y: 0 } },
+  { id: "reason", label: "optimize", kind: "reason", pipeline: { x: 0.72, y: 0 } },
+  { id: "root", label: "outcome", kind: "root", pipeline: { x: 1.0, y: 0 } },
 ];
 
 function indexById(id: string): number {

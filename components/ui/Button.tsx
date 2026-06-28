@@ -9,13 +9,13 @@ interface ButtonProps {
 }
 
 const base =
-  "group inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-medium tracking-tight transition-all duration-300 focus-visible:outline-2";
+  "group inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-medium tracking-tight transition-all duration-300 will-change-transform focus-visible:outline-2 motion-safe:hover:-translate-y-0.5 motion-safe:active:translate-y-0 motion-safe:active:scale-[0.98]";
 
 const variants: Record<Variant, string> = {
   primary:
-    "bg-accent text-white shadow-[0_0_0_1px_rgba(56,189,248,0.0)] hover:bg-accent-soft hover:shadow-[0_8px_40px_-8px_rgba(37,99,235,0.8)]",
+    "bg-accent text-white shadow-[0_4px_20px_-6px_rgba(37,99,235,0.55)] hover:bg-accent-soft hover:shadow-[0_14px_48px_-8px_rgba(37,99,235,0.9)]",
   ghost:
-    "text-text/90 ring-1 ring-white/12 backdrop-blur-sm hover:ring-white/30 hover:bg-white/[0.04]",
+    "text-text/90 ring-1 ring-white/15 backdrop-blur-sm hover:bg-white/[0.07] hover:text-white hover:ring-signal/45 hover:shadow-[0_12px_40px_-12px_rgba(56,189,248,0.5)]",
 };
 
 export function Button({ children, href = "#", variant = "primary" }: ButtonProps) {

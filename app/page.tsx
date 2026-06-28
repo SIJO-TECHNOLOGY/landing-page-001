@@ -2,8 +2,11 @@ import { SystemCanvas } from "@/components/system/SystemCanvas";
 import { TopNav } from "@/components/nav/TopNav";
 import { ColdOpen } from "@/components/acts/ColdOpen";
 import { ScrollAct } from "@/components/acts/ScrollAct";
+import { Capabilities } from "@/components/acts/Capabilities";
 import { Verdict } from "@/components/acts/Verdict";
+import { Process } from "@/components/acts/Process";
 import { Invitation } from "@/components/acts/Invitation";
+import { ACT_CHAOS, ACT_REASONING } from "@/lib/content";
 
 export default function Home() {
   return (
@@ -13,45 +16,37 @@ export default function Home() {
       <TopNav />
 
       <main className="relative">
-        {/* Act 0 — Cold open */}
+        {/* Act 0 — Cold open: hero + business-results proof */}
         <ColdOpen />
 
-        {/* Act I — Chaos */}
+        {/* Act I — Fragmented operations (the problem) */}
         <ScrollAct
-          caption="incident · 02:14:07"
-          heading="Distributed systems fail in ways no human can trace."
-          sub="A thousand signals scatter across services, queues, and logs. By the time you've found them, the page is already down."
+          caption={ACT_CHAOS.caption}
+          heading={ACT_CHAOS.heading}
+          sub={ACT_CHAOS.sub}
           align="left"
         />
 
-        {/* Act II — Awakening */}
+        {/* Act II — Purpose-built AI: capabilities + integrations */}
+        <Capabilities />
+
+        {/* Act III — Reasoning: predictive, data-driven insight */}
         <ScrollAct
-          caption="agents online"
-          heading="So AM Shift sends in a team of agents."
-          sub="Specialist AI agents — for logs, databases, APIs, and infrastructure — wake up and move on the incident together."
+          caption={ACT_REASONING.caption}
+          heading={ACT_REASONING.heading}
+          sub={ACT_REASONING.sub}
           align="right"
         />
 
-        {/* Act III — Reasoning */}
-        <ScrollAct
-          id="reasoning"
-          caption="correlating evidence"
-          heading="They investigate every layer at once — and resolve the conflicts."
-          sub="Evidence from each system is normalized, cross-checked, and reasoned over. The noise collapses into a single line of inquiry."
-          align="left"
-        />
-
-        {/* Act IV — Resolution */}
+        {/* Act IV — Measurable results */}
         <Verdict />
 
-        {/* Act V — Invitation */}
+        {/* Act V — Engagement model */}
+        <Process />
+
+        {/* Act VI — Invitation / CTA + footer */}
         <Invitation />
       </main>
-
-      {/* TEMPORARY build marker (Sprint 1.1) — remove before release. */}
-      <div className="pointer-events-none fixed bottom-3 left-3 z-50 font-mono text-[10px] tracking-[0.2em] text-faint/50">
-        v0.2-sprint1.1
-      </div>
     </>
   );
 }
