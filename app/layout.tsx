@@ -1,20 +1,65 @@
-import type { Metadata } from 'next'
-import './globals.css'
+import type { Metadata } from "next";
+import { Geist, Geist_Mono, Inter } from "next/font/google";
+import "./globals.css";
+import { MotionProvider } from "@/components/MotionProvider";
+import { BRAND } from "@/lib/content";
+
+const geistSans = Geist({
+  variable: "--font-geist-sans",
+  subsets: ["latin"],
+});
+
+const geistMono = Geist_Mono({
+  variable: "--font-geist-mono",
+  subsets: ["latin"],
+});
+
+const inter = Inter({
+  variable: "--font-inter",
+  subsets: ["latin"],
+});
+
+const TITLE = `${BRAND.full} — Purpose-built AI for business operations`;
+const DESCRIPTION =
+  "AceByte builds custom AI that automates and optimizes your operations — cutting costs, accelerating timelines, and turning data into decisions. Discover your AI readiness.";
 
 export const metadata: Metadata = {
-  title: 'Acebyte Technology - AI-Powered Solutions',
-  description: 'Transform your business with AI-powered solutions',
-}
+  metadataBase: new URL("https://www.acebyte-technology.com"),
+  title: TITLE,
+  description: DESCRIPTION,
+  applicationName: BRAND.full,
+  openGraph: {
+    title: TITLE,
+    description: DESCRIPTION,
+    siteName: BRAND.full,
+    type: "website",
+    url: "/",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: TITLE,
+    description: DESCRIPTION,
+  },
+};
+
+export const viewport = {
+  themeColor: "#0b1220",
+  colorScheme: "dark" as const,
+};
 
 export default function RootLayout({
   children,
-}: {
-  children: React.ReactNode
-}) {
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
   return (
-    <html lang="en">
-      <body>{children}</body>
+    <html
+      lang="en"
+      className={`${geistSans.variable} ${geistMono.variable} ${inter.variable} h-full antialiased`}
+    >
+      <body className="grain min-h-full bg-bg text-text">
+        <MotionProvider>{children}</MotionProvider>
+      </body>
     </html>
-  )
+  );
 }
-

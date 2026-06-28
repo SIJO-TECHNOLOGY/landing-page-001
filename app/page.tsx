@@ -1,28 +1,52 @@
-import Header from '@/components/Header'
-import Hero from '@/components/Hero'
-import StatsShowcase from '@/components/StatsShowcase'
-import TestimonialIntro from '@/components/TestimonialIntro'
-import PurposeBuiltAI from '@/components/PurposeBuiltAI'
-import SeamlessIntegration from '@/components/SeamlessIntegration'
-import DataDrivenSection from '@/components/DataDrivenSection'
-import AIResults from '@/components/AIResults'
-import ThreeSteps from '@/components/ThreeSteps'
-import Footer from '@/components/Footer'
+import { SystemCanvas } from "@/components/system/SystemCanvas";
+import { TopNav } from "@/components/nav/TopNav";
+import { ColdOpen } from "@/components/acts/ColdOpen";
+import { ScrollAct } from "@/components/acts/ScrollAct";
+import { Capabilities } from "@/components/acts/Capabilities";
+import { Verdict } from "@/components/acts/Verdict";
+import { Process } from "@/components/acts/Process";
+import { Invitation } from "@/components/acts/Invitation";
+import { ACT_CHAOS, ACT_REASONING } from "@/lib/content";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-gradient-to-b from-primary-darker to-primary-dark">
-      <Header />
-      <Hero />
-      <StatsShowcase />
-      <TestimonialIntro />
-      <PurposeBuiltAI />
-      <SeamlessIntegration />
-      <DataDrivenSection />
-      <AIResults />
-      <ThreeSteps />
-      <Footer />
-    </main>
-  )
-}
+    <>
+      {/* The protagonist — one persistent living system behind every act. */}
+      <SystemCanvas />
+      <TopNav />
 
+      <main className="relative">
+        {/* Act 0 — Cold open: hero + business-results proof */}
+        <ColdOpen />
+
+        {/* Act I — Fragmented operations (the problem) */}
+        <ScrollAct
+          caption={ACT_CHAOS.caption}
+          heading={ACT_CHAOS.heading}
+          sub={ACT_CHAOS.sub}
+          align="left"
+        />
+
+        {/* Act II — Purpose-built AI: capabilities + integrations */}
+        <Capabilities />
+
+        {/* Act III — Reasoning: predictive, data-driven insight */}
+        <ScrollAct
+          caption={ACT_REASONING.caption}
+          heading={ACT_REASONING.heading}
+          sub={ACT_REASONING.sub}
+          align="right"
+        />
+
+        {/* Act IV — Measurable results */}
+        <Verdict />
+
+        {/* Act V — Engagement model */}
+        <Process />
+
+        {/* Act VI — Invitation / CTA + footer */}
+        <Invitation />
+      </main>
+    </>
+  );
+}
