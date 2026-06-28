@@ -3,8 +3,11 @@
  *
  * Every visible string on the page is defined here so components stay
  * presentation-only and copy never gets duplicated or hardcoded across files.
- * Content is adapted from acebyte-technology.com, lightly refined for a quiet,
- * credible, enterprise tone (no unsupported numbers, no invented services).
+ *
+ * Voice: AceByte is an AI engineering and intelligent-automation company —
+ * a technical partner that designs, integrates and deploys production-ready
+ * systems. Tone is confident, precise, technical and calm. No hype, no
+ * absolute claims, no invented metrics or clients.
  */
 
 export interface NavLink {
@@ -48,86 +51,89 @@ export const BRAND = {
   tagline: "Engineering intelligence. Empowering business.",
 } as const;
 
-// Section anchors only — the contact CTA lives in the right-hand nav pill,
-// so "Get in touch" is intentionally not duplicated here.
+// Section anchors only — the consultation CTA lives in the right-hand nav pill.
 export const NAV: readonly NavLink[] = [
   { label: "Capabilities", href: ANCHORS.capabilities },
-  { label: "Results", href: ANCHORS.results },
+  { label: "Approach", href: ANCHORS.results },
   { label: "Process", href: ANCHORS.process },
 ];
 
-/** Primary + secondary calls to action, reused across the page. */
+/** A calm, consultative CTA system — no pressure, no urgency language. */
 export const CTA = {
-  readiness: { label: "Discover my AI readiness", href: ANCHORS.process },
-  assessment: { label: "Start my assessment", href: ANCHORS.contact },
-  consultation: { label: "Book a free consultation", href: ANCHORS.contact },
+  consultation: { label: "Book a Consultation", href: ANCHORS.contact },
+  schedule: { label: "Schedule a Consultation", href: ANCHORS.contact },
+  explore: { label: "Explore Your AI Opportunities", href: ANCHORS.capabilities },
 } as const;
 
 export const HERO = {
-  eyebrow: "AceByte Technology · Engineering intelligence",
-  // Refined from "Turn Your Business Into a Profit Machine with AI" — same
-  // intent (AI that drives profit), quieter and enterprise-credible.
-  headingTop: "Purpose-built AI for the",
-  headingAccent: "operations that run your business.",
-  sub: "AceByte builds custom AI that automates and optimizes how your business runs — cutting costs, accelerating timelines, and surfacing the insights that keep you ahead.",
-  primary: CTA.readiness,
-  secondary: CTA.consultation,
+  eyebrow: "AceByte Technology · AI Systems Engineering",
+  headingTop: "Intelligent systems engineered for",
+  headingAccent: "real business operations.",
+  sub: "We design and deploy AI systems that automate complex workflows, optimize operational efficiency, and create measurable, long-term business value.",
+  primary: CTA.consultation,
+  secondary: CTA.explore,
 } as const;
 
 /**
- * Business-results stats. Replaces the original infrastructure-flavored band
- * (99.9% uptime / 85% downtime / 24-7 auto-recovery), which was off-positioning
- * for a business-optimization product. Numbers are AceByte's own published
- * results figures.
+ * Capability-focused proof points (replaces invented performance metrics).
+ * Three items to match the existing three-column band.
  */
 export const STATS: readonly Stat[] = [
-  { value: "€500K+", label: "average annual savings" },
-  { value: "30%", label: "faster operations" },
-  { value: "40%", label: "fewer operational inefficiencies" },
+  { value: "Workflow Automation", label: "Reduce repetitive manual execution" },
+  { value: "Systems Integration", label: "Connect AI into existing business systems" },
+  { value: "Operational Efficiency", label: "Optimize internal process execution" },
 ];
 
-/** Act I — the problem AceByte addresses. */
+/** Act I — the operational reality AceByte addresses. */
 export const ACT_CHAOS = {
-  caption: "operations · fragmented",
-  heading: "Your operations are scattered across disconnected systems.",
-  sub: "Data lives in Salesforce, SAP, Oracle and a dozen other tools. The signal that matters is buried in the noise — and the cost of that compounds quietly, quarter after quarter.",
+  caption: "operational complexity",
+  heading: "Operational complexity is spread across disconnected systems.",
+  sub: "Critical data lives in Salesforce, SAP, Oracle and dozens of other tools. Without a connected view, manual effort accumulates and operational efficiency erodes.",
 } as const;
 
-/** Act II — purpose-built AI goes to work (intro to the capabilities block). */
+/** Act II — custom AI engineering (value proposition / why custom). */
 export const ACT_AWAKENING = {
-  caption: "purpose-built ai",
-  heading: "So AceByte builds AI designed for how your business actually runs.",
-  sub: "Custom models trained on your industry and your workflows — not a generic platform you have to bend your business to fit.",
+  caption: "custom ai engineering",
+  heading: "Off-the-shelf AI rarely solves real operational challenges.",
+  sub: "We engineer intelligent systems around your workflows, infrastructure and operational constraints — custom architectures designed for your operational reality, not generic templates you adapt to.",
 } as const;
 
-export const PILLARS_HEADING = "Unlock the power of purpose-built AI";
+export const PILLARS_HEADING = "Core capabilities";
 export const PILLARS: readonly Pillar[] = [
   {
-    title: "Purpose-built for your business",
-    body: "Custom AI models designed specifically for your industry and use cases.",
+    title: "Intelligent Workflow Automation",
+    body: "Automate repetitive operational processes with AI systems built for real business environments.",
   },
   {
-    title: "Proactive problem solving",
-    body: "Predict issues before they happen and take corrective action automatically.",
+    title: "Predictive Decision Intelligence",
+    body: "Turn operational data into actionable insight that strengthens day-to-day decision-making.",
   },
   {
-    title: "Seamless system integration",
-    body: "Works with your existing tools and workflows without disruption.",
+    title: "AI System Integration",
+    body: "Embed intelligent capabilities directly into your existing software ecosystem.",
   },
   {
-    title: "Market intelligence",
-    body: "Real-time insights and trends to keep you ahead of the competition.",
+    title: "Autonomous Operational Monitoring",
+    body: "Continuously monitor business workflows and reduce manual operational intervention.",
+  },
+  {
+    title: "Process Optimization Architecture",
+    body: "Design scalable automation architectures that improve long-term operational efficiency.",
+  },
+  {
+    title: "Custom AI Engineering",
+    body: "Build purpose-specific AI systems tailored to your organization and technical environment.",
   },
 ];
 
-/** Act III — reasoning across systems. */
+/** Act III — decision intelligence / automated response. */
 export const ACT_REASONING = {
-  caption: "predictive · data-driven",
-  heading: "It reasons across every system at once — and turns data into decisions.",
-  sub: "Evidence from each platform is normalized and cross-checked, so your teams act on a single trustworthy view instead of conflicting dashboards.",
+  caption: "decision intelligence",
+  heading: "Detect operational anomalies early and automate intelligent response.",
+  sub: "Operational data from each system is normalized and correlated, so teams act on a single reliable view — and emerging risks trigger automated response workflows instead of manual escalation.",
 } as const;
 
-export const INTEGRATIONS_HEADING = "Seamless integration with your systems";
+export const INTEGRATIONS_HEADING = "Integrated with your existing stack";
 export const INTEGRATIONS: readonly string[] = [
   "Salesforce",
   "SAP",
@@ -139,48 +145,53 @@ export const INTEGRATIONS: readonly string[] = [
   "Shopify",
 ];
 
-/** Act IV — measurable results (Verdict card). */
+/** Act IV — engineering philosophy + capability trust points. */
 export const RESULTS = {
-  caption: "real business results",
-  heading: "AI that delivers real, measurable results.",
-  sub: "AceByte turns fragmented operations into a single optimized system — with outcomes you can put on a board slide.",
-  // Original testimonial preserved; attribution kept as published. Not a
-  // fabricated client — shown as a founder statement, not invented social proof.
+  caption: "engineering philosophy",
+  heading: "Engineered for real operational complexity, not demos.",
+  sub: "AceByte builds production-ready intelligent systems that integrate with your enterprise environment and are designed to deliver measurable, long-term value.",
+  // Capability-focused trust points (replaces invented business metrics).
+  points: [
+    { value: "Complex environments", label: "Built for real operational complexity" },
+    { value: "Scalable deployment", label: "Designed for production growth" },
+    { value: "Enterprise integration", label: "Connected to your existing systems" },
+  ] as readonly Stat[],
+  // Founder vision statement (a philosophy block, not a testimonial).
   testimonial: {
     quote:
-      "Working with AceByte Technology completely changed the way we manage our operations. Their AI-driven platform brought us clarity, efficiency and transparency — we cut operational costs by 35% and accelerated timelines by nearly a month.",
-    name: "Austin ZHANG",
-    role: "Founder",
+      "Artificial intelligence should not remain experimental. It should integrate directly into real operational workflows and generate measurable business impact.",
+    name: "Austin Zhang",
+    role: "Founder, AceByte Technology",
   },
 } as const;
 
-/** Act V — process + invitation. */
-export const PROCESS_HEADING = "Kickstart your business optimization in 3 steps";
+/** Act V — engagement model. */
+export const PROCESS_HEADING = "From operational assessment to production deployment.";
 export const PROCESS: readonly ProcessStep[] = [
   {
     step: "01",
-    title: "Free assessment and discovery",
-    body: "We assess your current operations, identify immediate opportunities, and show you exactly where you can reduce costs and improve efficiency.",
+    title: "Discovery and assessment",
+    body: "We map your operational workflows, systems and constraints to identify where intelligent automation can create measurable value.",
   },
   {
     step: "02",
-    title: "Custom optimization roadmap",
-    body: "Receive a tailored action plan with clear ROI projections, realistic timelines, and a zero-disruption implementation strategy.",
+    title: "Architecture and roadmap",
+    body: "You receive a technical roadmap with a scoped implementation plan, integration approach and the expected operational outcomes.",
   },
   {
     step: "03",
-    title: "Implementation and support",
-    body: "We guide you through every step while you focus on running your business — with tangible improvements within weeks.",
+    title: "Engineering and deployment",
+    body: "We build, integrate and deploy production-ready systems into your environment, with ongoing support and continuous improvement.",
   },
 ];
 
 export const INVITATION = {
   caption: "get in touch",
-  headingTop: "Stop optimizing in the dark.",
-  headingAccent: "Start with an AI readiness assessment.",
-  sub: "Purpose-built AI for the teams running mission-critical operations. See where AceByte can cut cost and accelerate your business — before you commit to anything.",
-  primary: CTA.readiness,
-  secondary: CTA.consultation,
+  headingTop: "Ready to explore practical AI opportunities",
+  headingAccent: "for your business?",
+  sub: "Let's identify where intelligent automation can create measurable operational value inside your organization.",
+  primary: CTA.schedule,
+  secondary: CTA.explore,
 } as const;
 
 export const FOOTER = {

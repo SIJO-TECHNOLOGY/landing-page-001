@@ -24,7 +24,7 @@ export function Process() {
       className="relative z-10 flex min-h-screen flex-col justify-center gap-14 px-6 py-28 sm:px-12 lg:px-20"
     >
       <Reveal className="flex max-w-2xl flex-col gap-5">
-        <Caption>how it works</Caption>
+        <Caption>engagement model</Caption>
         <h2 className="font-display text-[clamp(2rem,4.6vw,3.5rem)] font-medium leading-[1.06] tracking-[-0.03em] text-balance">
           {PROCESS_HEADING}
         </h2>
@@ -55,7 +55,7 @@ export function Process() {
       </motion.ol>
 
       <Reveal>
-        <Button href={CTA.assessment.href}>{CTA.assessment.label}</Button>
+        <Button href={CTA.consultation.href}>{CTA.consultation.label}</Button>
       </Reveal>
     </section>
   );

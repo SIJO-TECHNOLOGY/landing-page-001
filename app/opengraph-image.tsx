@@ -34,6 +34,7 @@ export default async function OpengraphImage() {
         <div style={{ display: "flex", alignItems: "center", width: "100%" }}>
           <img
             src={iconSrc}
+            alt=""
             width={80}
             height={80}
             style={{ borderRadius: 18 }}

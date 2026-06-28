@@ -19,9 +19,9 @@ const inter = Inter({
   subsets: ["latin"],
 });
 
-const TITLE = `${BRAND.full} — Purpose-built AI for business operations`;
+const TITLE = `${BRAND.full} — AI Systems Engineering & Intelligent Automation`;
 const DESCRIPTION =
-  "AceByte builds custom AI that automates and optimizes your operations — cutting costs, accelerating timelines, and turning data into decisions. Discover your AI readiness.";
+  "AceByte engineers production-ready intelligent systems that automate complex workflows, optimize operational efficiency, and create measurable business value across your enterprise environment.";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.acebyte-technology.com"),

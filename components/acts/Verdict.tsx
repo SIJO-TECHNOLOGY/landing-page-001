@@ -2,7 +2,7 @@
 
 import { motion } from "motion/react";
 import { Caption } from "@/components/ui/Caption";
-import { RESULTS, STATS, ANCHORS } from "@/lib/content";
+import { RESULTS, ANCHORS } from "@/lib/content";
 import { EASE } from "@/lib/anim";
 
 const container = {
@@ -50,7 +50,7 @@ export function Verdict() {
           variants={item}
           className="mt-7 grid grid-cols-3 gap-3 border-y border-white/10 py-6"
         >
-          {STATS.map((stat) => (
+          {RESULTS.points.map((stat) => (
             <div key={stat.label} className="flex flex-col gap-1 text-center">
               <dd className="font-display text-2xl font-medium tracking-tight text-ok sm:text-3xl">
                 {stat.value}
