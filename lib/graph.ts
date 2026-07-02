@@ -41,24 +41,25 @@ interface Seed {
   pipeline: Vec;
 }
 
-// Source labels are the customer's existing systems (AceByte integrations);
-// the four agents are AceByte's purpose-built AI workers. The right side is the
-// optimization pipeline that resolves into a measurable outcome.
+// Source labels are the IT project domains of SIJO's banking & finance
+// clients; the four "consultant" nodes are the SIJO collective assigned to
+// missions. The right side is the delivery pipeline that resolves into a
+// successful project.
 const SEEDS: readonly Seed[] = [
-  { id: "logs", label: "salesforce", kind: "source", pipeline: { x: -1.0, y: -0.85 } },
-  { id: "db", label: "oracle", kind: "source", pipeline: { x: -1.0, y: -0.51 } },
-  { id: "kafka", label: "sap", kind: "source", pipeline: { x: -1.0, y: -0.17 } },
-  { id: "api", label: "netsuite", kind: "source", pipeline: { x: -1.0, y: 0.17 } },
-  { id: "k8s", label: "workday", kind: "source", pipeline: { x: -1.0, y: 0.51 } },
-  { id: "ext", label: "hubspot", kind: "source", pipeline: { x: -1.0, y: 0.85 } },
-  { id: "coordinator", label: "acebyte.core", kind: "coordinator", pipeline: { x: -0.5, y: 0 } },
-  { id: "agent-log", label: "agent://data", kind: "agent", pipeline: { x: -0.05, y: -0.6 } },
-  { id: "agent-db", label: "agent://ops", kind: "agent", pipeline: { x: -0.05, y: -0.2 } },
-  { id: "agent-api", label: "agent://finance", kind: "agent", pipeline: { x: -0.05, y: 0.2 } },
-  { id: "agent-infra", label: "agent://market", kind: "agent", pipeline: { x: -0.05, y: 0.6 } },
-  { id: "normalize", label: "normalize", kind: "normalize", pipeline: { x: 0.4, y: 0 } },
-  { id: "reason", label: "optimize", kind: "reason", pipeline: { x: 0.72, y: 0 } },
-  { id: "root", label: "outcome", kind: "root", pipeline: { x: 1.0, y: 0 } },
+  { id: "logs", label: "trading", kind: "source", pipeline: { x: -1.0, y: -0.85 } },
+  { id: "db", label: "risque", kind: "source", pipeline: { x: -1.0, y: -0.51 } },
+  { id: "kafka", label: "paiements", kind: "source", pipeline: { x: -1.0, y: -0.17 } },
+  { id: "api", label: "conformité", kind: "source", pipeline: { x: -1.0, y: 0.17 } },
+  { id: "k8s", label: "data", kind: "source", pipeline: { x: -1.0, y: 0.51 } },
+  { id: "ext", label: "cloud", kind: "source", pipeline: { x: -1.0, y: 0.85 } },
+  { id: "coordinator", label: "sijo.collectif", kind: "coordinator", pipeline: { x: -0.5, y: 0 } },
+  { id: "agent-log", label: "consultant://dev", kind: "agent", pipeline: { x: -0.05, y: -0.6 } },
+  { id: "agent-db", label: "consultant://data", kind: "agent", pipeline: { x: -0.05, y: -0.2 } },
+  { id: "agent-api", label: "consultant://finance", kind: "agent", pipeline: { x: -0.05, y: 0.2 } },
+  { id: "agent-infra", label: "référent://sénior", kind: "agent", pipeline: { x: -0.05, y: 0.6 } },
+  { id: "normalize", label: "intégration", kind: "normalize", pipeline: { x: 0.4, y: 0 } },
+  { id: "reason", label: "accompagnement", kind: "reason", pipeline: { x: 0.72, y: 0 } },
+  { id: "root", label: "réussite", kind: "root", pipeline: { x: 1.0, y: 0 } },
 ];
 
 function indexById(id: string): number {

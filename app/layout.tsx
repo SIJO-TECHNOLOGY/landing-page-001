@@ -19,12 +19,12 @@ const inter = Inter({
   subsets: ["latin"],
 });
 
-const TITLE = `${BRAND.full} — AI Systems Engineering & Intelligent Automation`;
+const TITLE = `${BRAND.full} — Le cabinet qui pense à vous`;
 const DESCRIPTION =
-  "AceByte engineers production-ready intelligent systems that automate complex workflows, optimize operational efficiency, and create measurable business value across your enterprise environment.";
+  "SIJO est un cabinet de conseil en IT, pure player technologique et digital en banque et finance. Nous accompagnons nos clients du CAC 40 dans la réalisation de leurs projets techniques, et nos consultants dans leurs projets de carrière.";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.acebyte-technology.com"),
+  metadataBase: new URL("https://sijo.fr"),
   title: TITLE,
   description: DESCRIPTION,
   applicationName: BRAND.full,
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport = {
-  themeColor: "#0b1220",
+  themeColor: "#0c1228",
   colorScheme: "dark" as const,
 };
 
@@ -54,7 +54,7 @@ export default function RootLayout({
 }>) {
   return (
     <html
-      lang="en"
+      lang="fr"
       className={`${geistSans.variable} ${geistMono.variable} ${inter.variable} h-full antialiased`}
     >
       <body className="grain min-h-full bg-bg text-text">

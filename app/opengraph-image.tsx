@@ -5,7 +5,7 @@ import { BRAND, HERO, STATS } from "@/lib/content";
 
 // Branded link-preview card (iMessage / WhatsApp / Slack / social).
 export const runtime = "nodejs";
-export const alt = `${BRAND.full} — Purpose-built AI for business operations`;
+export const alt = `${BRAND.full} — ${BRAND.tagline}`;
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -23,9 +23,9 @@ export default async function OpengraphImage() {
           flexDirection: "column",
           justifyContent: "space-between",
           padding: "72px 80px",
-          backgroundColor: "#0b1220",
+          backgroundColor: "#0c1228",
           backgroundImage:
-            "linear-gradient(135deg, #0e1729 0%, #0b1220 45%, #070b14 100%)",
+            "linear-gradient(135deg, #101736 0%, #0c1228 45%, #080c1c 100%)",
           color: "#ffffff",
           fontFamily: "sans-serif",
         }}
@@ -57,10 +57,10 @@ export default async function OpengraphImage() {
               fontSize: 19,
               letterSpacing: 6,
               textTransform: "uppercase",
-              color: "#38bdf8",
+              color: "#a3bbf0",
             }}
           >
-            Engineering Intelligence
+            {BRAND.tagline}
           </div>
         </div>
 
@@ -68,11 +68,11 @@ export default async function OpengraphImage() {
         <div
           style={{
             display: "flex",
-            fontSize: 66,
+            fontSize: 56,
             fontWeight: 600,
-            lineHeight: 1.05,
-            letterSpacing: -2,
-            maxWidth: 940,
+            lineHeight: 1.08,
+            letterSpacing: -1.5,
+            maxWidth: 1000,
           }}
         >
           {`${HERO.headingTop} ${HERO.headingAccent}`}
@@ -90,7 +90,7 @@ export default async function OpengraphImage() {
               }}
             >
               <div
-                style={{ display: "flex", fontSize: 46, fontWeight: 600 }}
+                style={{ display: "flex", fontSize: 36, fontWeight: 600 }}
               >
                 {stat.value}
               </div>

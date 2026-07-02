@@ -17,7 +17,7 @@ export function TopNav() {
         href={ANCHORS.top}
         className="font-display text-sm font-semibold tracking-tight"
       >
-        Ace<span className="text-accent-soft">Byte</span>
+        <span className="text-accent-soft">S</span>IJO
       </a>
 
       <nav className="hidden items-center gap-8 md:flex">
@@ -34,9 +34,9 @@ export function TopNav() {
 
       <a
         href={CTA.consultation.href}
-        className="rounded-full border border-white/15 bg-white/[0.02] px-4 py-1.5 font-mono text-[11px] uppercase tracking-[0.2em] text-dim transition-all duration-300 hover:border-signal/50 hover:bg-white/[0.08] hover:text-white hover:shadow-[0_10px_30px_-12px_rgba(56,189,248,0.55)] motion-safe:hover:-translate-y-0.5 motion-safe:active:translate-y-0"
+        className="rounded-full border border-white/15 bg-white/[0.02] px-4 py-1.5 font-mono text-[11px] uppercase tracking-[0.2em] text-dim transition-all duration-300 hover:border-signal/50 hover:bg-white/[0.08] hover:text-white hover:shadow-[0_10px_30px_-12px_rgba(163,187,240,0.55)] motion-safe:hover:-translate-y-0.5 motion-safe:active:translate-y-0"
       >
-        Get in touch
+        {CTA.consultation.label}
       </a>
     </motion.header>
   );

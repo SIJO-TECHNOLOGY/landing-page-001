@@ -1,17 +1,17 @@
 @import "tailwindcss";
 
 @theme {
-  /* Color system — cinematic dark, one accent + one live-signal tint */
-  --color-bg: #0b1220;
-  --color-bg-deep: #070b14;
-  --color-surface: #0e1729;
-  --color-surface-2: #111c30;
+  /* Color system — cinematic dark on SIJO brand blues (#1F60F3 / #5D89EF / #A3BBF0, navy #131A3D) */
+  --color-bg: #0c1228;
+  --color-bg-deep: #080c1c;
+  --color-surface: #101736;
+  --color-surface-2: #131a3d;
   --color-text: #ffffff;
-  --color-dim: #94a3b8;
-  --color-faint: #5b6b85;
-  --color-accent: #2563eb;
-  --color-accent-soft: #3b82f6;
-  --color-signal: #38bdf8;
+  --color-dim: #96a5c8;
+  --color-faint: #5d6b93;
+  --color-accent: #1f60f3;
+  --color-accent-soft: #5d89ef;
+  --color-signal: #a3bbf0;
   --color-ok: #34d399;
   --color-warn: #f59e0b;
 

@@ -33,19 +33,20 @@ import { useReducedMotion } from "@/lib/hooks/useReducedMotion";
 
 type RGB = readonly [number, number, number];
 
+/* SIJO brand blues — #1F60F3 / #5D89EF / #A3BBF0 on the dark navy canvas. */
 const PALETTE: Record<NodeKind, { rgb: RGB; r: number; glow: number }> = {
-  source: { rgb: [99, 130, 200], r: 2.6, glow: 14 },
-  coordinator: { rgb: [59, 130, 246], r: 4.4, glow: 30 },
-  agent: { rgb: [56, 189, 248], r: 4.0, glow: 28 },
-  normalize: { rgb: [99, 160, 246], r: 3.6, glow: 22 },
-  reason: { rgb: [120, 170, 255], r: 4.0, glow: 26 },
-  root: { rgb: [56, 189, 248], r: 5.2, glow: 40 },
+  source: { rgb: [93, 118, 190], r: 2.6, glow: 14 },
+  coordinator: { rgb: [31, 96, 243], r: 4.4, glow: 30 },
+  agent: { rgb: [163, 187, 240], r: 4.0, glow: 28 },
+  normalize: { rgb: [93, 137, 239], r: 3.6, glow: 22 },
+  reason: { rgb: [122, 160, 240], r: 4.0, glow: 26 },
+  root: { rgb: [163, 187, 240], r: 5.2, glow: 40 },
 };
 
 const OK: RGB = [52, 211, 153];
 const WARN: RGB = [245, 158, 11];
 const RED: RGB = [239, 68, 68];
-const SIGNAL: RGB = [56, 189, 248];
+const SIGNAL: RGB = [163, 187, 240];
 const WHITE: RGB = [226, 240, 255];
 
 const PACKET_COUNT = 90;
@@ -545,7 +546,7 @@ export function SystemCanvas() {
       className="pointer-events-none fixed inset-0 z-0"
       style={{
         background:
-          "radial-gradient(120% 90% at 50% 42%, #0e1729 0%, #0b1220 45%, #070b14 100%)",
+          "radial-gradient(120% 90% at 50% 42%, #101736 0%, #0c1228 45%, #080c1c 100%)",
       }}
     >
       <canvas ref={canvasRef} className="block h-full w-full" />

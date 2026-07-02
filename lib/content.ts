@@ -1,13 +1,14 @@
 /**
- * Single source of truth for all AceByte landing-page copy.
+ * Single source of truth for all SIJO landing-page copy.
  *
  * Every visible string on the page is defined here so components stay
  * presentation-only and copy never gets duplicated or hardcoded across files.
  *
- * Voice: AceByte is an AI engineering and intelligent-automation company —
- * a technical partner that designs, integrates and deploys production-ready
- * systems. Tone is confident, precise, technical and calm. No hype, no
- * absolute claims, no invented metrics or clients.
+ * Voice: SIJO est un cabinet de conseil en IT, pure player technologique et
+ * digital en banque et finance — "Le cabinet qui pense à vous". Ton calme,
+ * précis et humain : la force du collectif, l'accompagnement des consultants
+ * et la confiance des grands comptes. Pas de superlatifs, pas de métriques
+ * inventées.
  */
 
 export interface NavLink {
@@ -39,168 +40,168 @@ export interface ProcessStep {
 /** In-page anchors — kept in one place so nav, CTAs and sections stay in sync. */
 export const ANCHORS = {
   top: "#top",
-  capabilities: "#capabilities",
-  results: "#results",
-  process: "#process",
+  capabilities: "#valeurs",
+  results: "#expertise",
+  process: "#parcours",
   contact: "#contact",
 } as const;
 
 export const BRAND = {
-  name: "AceByte",
-  full: "AceByte Technology",
-  tagline: "Engineering intelligence. Empowering business.",
+  name: "SIJO",
+  full: "SIJO",
+  tagline: "Le cabinet qui pense à vous.",
 } as const;
 
-// Section anchors only — the consultation CTA lives in the right-hand nav pill.
+// Section anchors only — the contact CTA lives in the right-hand nav pill.
 export const NAV: readonly NavLink[] = [
-  { label: "Capabilities", href: ANCHORS.capabilities },
-  { label: "Approach", href: ANCHORS.results },
-  { label: "Process", href: ANCHORS.process },
+  { label: "Valeurs", href: ANCHORS.capabilities },
+  { label: "Expertise", href: ANCHORS.results },
+  { label: "Parcours", href: ANCHORS.process },
 ];
 
-/** A calm, consultative CTA system — no pressure, no urgency language. */
+/** A calm, human CTA system — no pressure, no urgency language. */
 export const CTA = {
-  consultation: { label: "Book a Consultation", href: ANCHORS.contact },
-  schedule: { label: "Schedule a Consultation", href: ANCHORS.contact },
-  explore: { label: "Explore Your AI Opportunities", href: ANCHORS.capabilities },
+  consultation: { label: "Nous contacter", href: ANCHORS.contact },
+  schedule: { label: "Nous rejoindre", href: ANCHORS.contact },
+  explore: { label: "Découvrir nos valeurs", href: ANCHORS.capabilities },
 } as const;
 
 export const HERO = {
-  eyebrow: "AceByte Technology · AI Systems Engineering",
-  headingTop: "Intelligent systems engineered for",
-  headingAccent: "real business operations.",
-  sub: "We design and deploy AI systems that automate complex workflows, optimize operational efficiency, and create measurable, long-term business value.",
+  eyebrow: "SIJO · Conseil IT · Banque & Finance",
+  headingTop: "Le cabinet de conseil en IT où",
+  headingAccent: "intelligence et force collective façonnent l'avenir.",
+  sub: "SIJO est un cabinet de conseil en IT, pure player technologique et digital en banque et finance. Nous accompagnons nos clients du CAC 40 dans la réalisation de leurs projets techniques, et nos consultants dans leurs projets de carrière.",
   primary: CTA.consultation,
   secondary: CTA.explore,
 } as const;
 
 /**
- * Capability-focused proof points (replaces invented performance metrics).
+ * Proof points ancrés dans la réalité du cabinet.
  * Three items to match the existing three-column band.
  */
 export const STATS: readonly Stat[] = [
-  { value: "Workflow Automation", label: "Reduce repetitive manual execution" },
-  { value: "Systems Integration", label: "Connect AI into existing business systems" },
-  { value: "Operational Efficiency", label: "Optimize internal process execution" },
+  { value: "Banque & Finance", label: "Pure player des environnements financiers exigeants" },
+  { value: "Grands comptes", label: "Aux côtés de clients du CAC 40 depuis 2017" },
+  { value: "Great Place to Work", label: "Cabinet certifié — le bien-être comme fondation" },
 ];
 
-/** Act I — the operational reality AceByte addresses. */
+/** Act I — la réalité opérationnelle que SIJO adresse. */
 export const ACT_CHAOS = {
-  caption: "operational complexity",
-  heading: "Operational complexity is spread across disconnected systems.",
-  sub: "Critical data lives in Salesforce, SAP, Oracle and dozens of other tools. Without a connected view, manual effort accumulates and operational efficiency erodes.",
+  caption: "des projets exigeants",
+  heading: "Les projets IT en banque et finance sont complexes et fragmentés.",
+  sub: "Systèmes critiques, contraintes réglementaires, équipes dispersées : sans un partenaire de confiance, l'expertise se dilue et les projets s'essoufflent.",
 } as const;
 
-/** Act II — custom AI engineering (value proposition / why custom). */
+/** Act II — la force du collectif (value proposition). */
 export const ACT_AWAKENING = {
-  caption: "custom ai engineering",
-  heading: "Off-the-shelf AI rarely solves real operational challenges.",
-  sub: "We engineer intelligent systems around your workflows, infrastructure and operational constraints — custom architectures designed for your operational reality, not generic templates you adapt to.",
+  caption: "la force du collectif",
+  heading: "Un consultant ne devrait jamais avancer seul.",
+  sub: "Chez SIJO, chaque mission s'appuie sur un collectif : un ingénieur d'affaires dédié, un référent technique sénior et un accès illimité à la formation — l'intelligence collective au service de chaque projet.",
 } as const;
 
-export const PILLARS_HEADING = "Core capabilities";
+export const PILLARS_HEADING = "Nos valeurs";
 export const PILLARS: readonly Pillar[] = [
   {
-    title: "Intelligent Workflow Automation",
-    body: "Automate repetitive operational processes with AI systems built for real business environments.",
+    title: "Transparence",
+    body: "Un facteur clé au cœur de la vie du cabinet, pour de bonnes relations entre les collaborateurs.",
   },
   {
-    title: "Predictive Decision Intelligence",
-    body: "Turn operational data into actionable insight that strengthens day-to-day decision-making.",
+    title: "Expertise",
+    body: "Un professionnalisme d'accompagnement de nos consultants et de nos projets.",
   },
   {
-    title: "AI System Integration",
-    body: "Embed intelligent capabilities directly into your existing software ecosystem.",
+    title: "Accompagnement",
+    body: "Un suivi régulier assuré par un ingénieur d'affaires, indispensable pour la montée en compétence.",
   },
   {
-    title: "Autonomous Operational Monitoring",
-    body: "Continuously monitor business workflows and reduce manual operational intervention.",
+    title: "Proximité",
+    body: "Une relation de confiance pour une bonne collaboration, au quotidien.",
   },
   {
-    title: "Process Optimization Architecture",
-    body: "Design scalable automation architectures that improve long-term operational efficiency.",
+    title: "Formation continue",
+    body: "Un accès illimité à notre plateforme de formation et la préparation des certifications.",
   },
   {
-    title: "Custom AI Engineering",
-    body: "Build purpose-specific AI systems tailored to your organization and technical environment.",
+    title: "Gestion de carrière",
+    body: "Un onboarding complet, un suivi hebdomadaire et une évolution construite dans la durée.",
   },
 ];
 
-/** Act III — decision intelligence / automated response. */
+/** Act III — l'accompagnement au quotidien. */
 export const ACT_REASONING = {
-  caption: "decision intelligence",
-  heading: "Detect operational anomalies early and automate intelligent response.",
-  sub: "Operational data from each system is normalized and correlated, so teams act on a single reliable view — and emerging risks trigger automated response workflows instead of manual escalation.",
+  caption: "l'accompagnement",
+  heading: "Un suivi continu, du premier jour à la réussite de la mission.",
+  sub: "Chaque consultant est accompagné en continu : points réguliers avec son business manager, référent technique sénior sur la mission, et un parcours de formation aligné sur ses objectifs de carrière.",
 } as const;
 
-export const INTEGRATIONS_HEADING = "Integrated with your existing stack";
+export const INTEGRATIONS_HEADING = "Ils nous font confiance";
 export const INTEGRATIONS: readonly string[] = [
-  "Salesforce",
-  "SAP",
-  "Oracle",
-  "Microsoft",
-  "NetSuite",
-  "Workday",
-  "HubSpot",
-  "Shopify",
+  "Société Générale",
+  "BNP Paribas",
+  "Crédit Agricole",
+  "La Banque Postale",
+  "Edmond de Rothschild",
+  "BPCE",
+  "Engie",
+  "Amundi",
 ];
 
-/** Act IV — engineering philosophy + capability trust points. */
+/** Act IV — notre histoire + points de confiance. */
 export const RESULTS = {
-  caption: "engineering philosophy",
-  heading: "Engineered for real operational complexity, not demos.",
-  sub: "AceByte builds production-ready intelligent systems that integrate with your enterprise environment and are designed to deliver measurable, long-term value.",
-  // Capability-focused trust points (replaces invented business metrics).
+  caption: "notre histoire",
+  heading: "Un cabinet pensé pour ses clients et ses consultants.",
+  sub: "Fondé en 2017 par deux amis passionnés de finance et d'entrepreneuriat, SIJO accompagne les grands comptes de la banque et de la finance avec une conviction : la réussite des projets passe par le bien-être de ceux qui les réalisent.",
+  // Points de confiance ancrés dans les faits du cabinet.
   points: [
-    { value: "Complex environments", label: "Built for real operational complexity" },
-    { value: "Scalable deployment", label: "Designed for production growth" },
-    { value: "Enterprise integration", label: "Connected to your existing systems" },
+    { value: "Fondé en 2017", label: "Une croissance construite dans la durée" },
+    { value: "Certifié Great Place to Work", label: "Le bien-être des consultants, reconnu" },
+    { value: "Clients grands comptes", label: "Banque, finance et énergie" },
   ] as readonly Stat[],
-  // Founder vision statement (a philosophy block, not a testimonial).
+  // Vision des fondateurs (un bloc philosophie, pas un témoignage).
   testimonial: {
     quote:
-      "Artificial intelligence should not remain experimental. It should integrate directly into real operational workflows and generate measurable business impact.",
-    name: "Austin Zhang",
-    role: "Founder, AceByte Technology",
+      "Une entreprise d'expertise en conseil, centrée sur le besoin de ses clients et le bien-être de ses consultants.",
+    name: "Les fondateurs",
+    role: "SIJO, depuis 2017",
   },
 } as const;
 
-/** Act V — engagement model. */
-export const PROCESS_HEADING = "From operational assessment to production deployment.";
+/** Act V — le parcours avec SIJO. */
+export const PROCESS_HEADING = "De la rencontre à la réussite de vos projets.";
 export const PROCESS: readonly ProcessStep[] = [
   {
     step: "01",
-    title: "Discovery and assessment",
-    body: "We map your operational workflows, systems and constraints to identify where intelligent automation can create measurable value.",
+    title: "Rencontre et écoute",
+    body: "Nous prenons le temps de comprendre votre besoin — projet technique côté client, ou projet de carrière côté consultant.",
   },
   {
     step: "02",
-    title: "Architecture and roadmap",
-    body: "You receive a technical roadmap with a scoped implementation plan, integration approach and the expected operational outcomes.",
+    title: "Mission et intégration",
+    body: "Nous alignons la bonne expertise sur le bon projet, avec un onboarding complet et un référent technique sénior sur chaque mission.",
   },
   {
     step: "03",
-    title: "Engineering and deployment",
-    body: "We build, integrate and deploy production-ready systems into your environment, with ongoing support and continuous improvement.",
+    title: "Accompagnement continu",
+    body: "Suivi régulier par un ingénieur d'affaires, formation illimitée et gestion de carrière : un accompagnement qui s'inscrit dans la durée.",
   },
 ];
 
 export const INVITATION = {
-  caption: "get in touch",
-  headingTop: "Ready to explore practical AI opportunities",
-  headingAccent: "for your business?",
-  sub: "Let's identify where intelligent automation can create measurable operational value inside your organization.",
-  primary: CTA.schedule,
-  secondary: CTA.explore,
+  caption: "nous contacter",
+  headingTop: "Envie d'écrire la suite",
+  headingAccent: "avec SIJO ?",
+  sub: "Que vous soyez un grand compte avec un projet technique ou un consultant en quête d'un cabinet qui pense à vous, parlons-en.",
+  primary: CTA.consultation,
+  secondary: CTA.schedule,
 } as const;
 
 export const FOOTER = {
-  company: "AceByte Technology Inc.",
-  address: "77 Rue Henri Farman, 75015 Issy-les-Moulineaux, France",
-  copyright: "© 2026 AceByte Technology Inc. All rights reserved.",
+  company: "SIJO",
+  address: "43 Rue Pierre Brossolette, 92300 Levallois-Perret, France",
+  copyright: "© 2026 SIJO. Tous droits réservés.",
   legal: [
-    { label: "Terms of service", href: "#" },
-    { label: "Privacy Policy", href: "#" },
-    { label: "Cookie Policy", href: "#" },
+    { label: "Politique de confidentialité", href: "#" },
+    { label: "Mentions légales", href: "#" },
+    { label: "LinkedIn", href: "https://www.linkedin.com/company/sijoesn" },
   ] as readonly NavLink[],
 } as const;
